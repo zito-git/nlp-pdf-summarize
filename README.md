@@ -128,31 +128,34 @@ Swagger UI: http://localhost:8000/docs
 
 ---
 ## 🧾 API 엔드포인트
-📤 /upload — PDF 업로드
+#### 📤 /upload — PDF 업로드
+
+**Method:** POST  
+**Form-Data:**
+```bash
+file: sample.pdf
 ```
-Method: POST
-Form-Data:
-file: PDF 파일
-
 Response:
-
+```json
 {
   "message": "PDF 업로드 완료",
   "chunks": 128,
   "session_id": "e1b2c3d4-5678-90ab-cdef-1234567890ab"
 }
 ```
-💬 /ask — 질문하기
+---
+#### 💬 /ask — 질문하기
+
+**Method:** POST  
+**Form-Data:**
+
 ```
-Method: POST
-Form-Data:
-
 question: 질문 내용
-
 session_id: 업로드 시 받은 세션 UUID
+```
 
 Response:
-
+```json
 {
   "request_uuid": "d4a8e8b0-92e3-4f6f-8bb0-6bcd5cbd9a50",
   "answer": "문서의 주요 내용은 ~입니다."
