@@ -7,7 +7,7 @@ services:
     restart: always
     runtime: nvidia
     env_file:
-      - .env # ✅ 명시적으로 .env 파일 로드
+      - .env # .env 파일 로드
     environment:
       - NVIDIA_VISIBLE_DEVICES=0
     ports:
