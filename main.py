@@ -7,7 +7,7 @@ from pypdf import PdfReader
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 import pickle
-from dotenv import load_dotenv  # ✅ 추가
+from dotenv import load_dotenv 
 
 
 app = FastAPI()
